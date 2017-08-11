@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engzli.Fard.Web", "Engzli.Fard.Web\Engzli.Fard.Web.csproj", "{984881C4-1FDC-461C-B8E5-171F65764D44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engzli.Fard.Entities", "Engzli.Fard.Entities\Engzli.Fard.Entities.csproj", "{075168AD-7C32-42C9-A6A3-67D7087B917C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{984881C4-1FDC-461C-B8E5-171F65764D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984881C4-1FDC-461C-B8E5-171F65764D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984881C4-1FDC-461C-B8E5-171F65764D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984881C4-1FDC-461C-B8E5-171F65764D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{075168AD-7C32-42C9-A6A3-67D7087B917C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075168AD-7C32-42C9-A6A3-67D7087B917C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075168AD-7C32-42C9-A6A3-67D7087B917C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075168AD-7C32-42C9-A6A3-67D7087B917C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+E:\Work\Store\Engzli.Fard\Engzli.Fard.Entities\bin\Debug\Engzli.Fard.Entities.dll
+E:\Work\Store\Engzli.Fard\Engzli.Fard.Entities\bin\Debug\Engzli.Fard.Entities.pdb
+E:\Work\Store\Engzli.Fard\Engzli.Fard.Entities\obj\Debug\Engzli.Fard.Entities.csprojResolveAssemblyReference.cache
+E:\Work\Store\Engzli.Fard\Engzli.Fard.Entities\obj\Debug\Engzli.Fard.Entities.dll
+E:\Work\Store\Engzli.Fard\Engzli.Fard.Entities\obj\Debug\Engzli.Fard.Entities.pdb

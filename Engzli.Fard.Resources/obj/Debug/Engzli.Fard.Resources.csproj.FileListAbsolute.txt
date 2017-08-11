@@ -1,0 +1,10 @@
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\bin\Debug\Engzli.Fard.Resources.dll
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\bin\Debug\Engzli.Fard.Resources.pdb
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\obj\Debug\Engzli.Fard.Resources.csprojResolveAssemblyReference.cache
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\obj\Debug\Engzli.Fard.Resources.dll
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\obj\Debug\Engzli.Fard.Resources.pdb
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\bin\Debug\ar\Engzli.Fard.Resources.resources.dll
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\obj\Debug\Engzli.Fard.Resources.Resource.resources
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\obj\Debug\Engzli.Fard.Resources.Resource.ar.resources
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\obj\Debug\Engzli.Fard.Resources.csproj.GenerateResource.Cache
+E:\Work\Fard\FardProgect\Engzli-Web-Fard\Engzli.Fard.Resources\obj\Debug\ar\Engzli.Fard.Resources.resources.dll

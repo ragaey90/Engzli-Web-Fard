@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="97649ab9d5cc479f8ecf728c2dcea00f" Name="Diagram1">
+        <EntityTypeShape EntityType="FardModel.fm" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.fm_health" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.fm_passport" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.fm_study_work" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.org_visitors" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.problems_reports" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider" Width="1.5" PointX="0.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_associations" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_distrbution" Width="1.5" PointX="3" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_family_needs" Width="1.5" PointX="3" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_health" Width="1.5" PointX="3" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_house_assest" Width="1.5" PointX="3" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_income_eg" Width="1.5" PointX="3" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_passport" Width="1.5" PointX="3" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_researcher" Width="1.5" PointX="3" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_residence" Width="1.5" PointX="3" PointY="52.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.provider_study_work" Width="1.5" PointX="3" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.user" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FardModel.usersmg" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="FardModel.fm_health_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.fm_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.fm_passport_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.fm_study_work_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_associations_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_distrbution_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_family_needs_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_health_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_house_assest_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_income_eg_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_passport_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_researcher_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_residence_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.provider_study_work_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="FardModel.usersmg_ibfk_1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

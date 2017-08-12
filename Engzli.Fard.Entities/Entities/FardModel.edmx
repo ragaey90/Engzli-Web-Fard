@@ -1,0 +1,1591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="fm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" Nullable="false" />
+          <Property Name="fm_relative" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="fm_name" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fm_health">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" Nullable="false" />
+          <Property Name="health_diabetes_st1" Type="int" Nullable="false" />
+          <Property Name="health_diabetes_st2" Type="int" Nullable="false" />
+          <Property Name="health_bloodpresure" Type="int" Nullable="false" />
+          <Property Name="health_cv" Type="int" Nullable="false" />
+          <Property Name="health_epilipce" Type="int" Nullable="false" />
+          <Property Name="health_asthma" Type="int" Nullable="false" />
+          <Property Name="health_gland" Type="int" Nullable="false" />
+          <Property Name="health_tuamer_st1" Type="int" Nullable="false" />
+          <Property Name="health_tuamer_st2" Type="int" Nullable="false" />
+          <Property Name="health_anima" Type="int" Nullable="false" />
+          <Property Name="health_disability_st1" Type="int" Nullable="false" />
+          <Property Name="health_disability_st2" Type="int" Nullable="false" />
+          <Property Name="health_disability_st3" Type="int" Nullable="false" />
+          <Property Name="health_surgry" Type="int" Nullable="false" />
+          <Property Name="health_disease_st1" Type="int" Nullable="false" />
+          <Property Name="health_disease_st2" Type="int" Nullable="false" />
+          <Property Name="health_disease_st3" Type="int" Nullable="false" />
+          <Property Name="health_disease_st4" Type="int" Nullable="false" />
+          <Property Name="health_disease_st5" Type="int" Nullable="false" />
+          <Property Name="health_disease_st6" Type="int" Nullable="false" />
+          <Property Name="health_med_care" Type="int" Nullable="false" />
+          <Property Name="health_xray" Type="int" Nullable="false" />
+          <Property Name="health_med_tests" Type="int" Nullable="false" />
+          <Property Name="health_medicine" Type="varchar(max)" Nullable="false" />
+          <Property Name="note" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fm_passport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" Nullable="false" />
+          <Property Name="passport_id" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="passport_gender" Type="int" Nullable="false" />
+          <Property Name="passport_nationality" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passport_birthplace" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="passport_birthdate" Type="date" />
+          <Property Name="passport_issueplace" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="passport_issuedate" Type="date" />
+          <Property Name="passport_expiredate" Type="date" />
+          <Property Name="passport_outofsy_date" Type="date" />
+          <Property Name="passport_intoeg_date" Type="date" />
+        </EntityType>
+        <EntityType Name="fm_study_work">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" Nullable="false" />
+          <Property Name="fm_study_work_st" Type="int" Nullable="false" />
+          <Property Name="fm_study_work_level" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="fm_study_work_skills" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="fm_study_work_ability" Type="int" Nullable="false" />
+          <Property Name="fm_study_work_workeg" Type="int" Nullable="false" />
+          <Property Name="fm_study_work_notegreg" Type="int" Nullable="false" />
+          <Property Name="fm_study_work_reg" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="fm_study_work_reg_soc_school" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="org_visitors">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="people" Type="int" Nullable="false" />
+          <Property Name="rooms_count" Type="int" Nullable="false" />
+          <Property Name="datetime_start" Type="datetime2" Precision="0" />
+          <Property Name="datetime_end" Type="datetime2" Precision="0" />
+          <Property Name="note" Type="varchar(max)" Nullable="false" />
+          <Property Name="addedby" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="addeddatetime" Type="datetime2" Precision="0" />
+          <Property Name="editedby" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="editeddatetime" Type="datetime2" Precision="0" />
+        </EntityType>
+        <EntityType Name="problems_reports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="problem" Type="varchar(max)" Nullable="false" />
+          <Property Name="addedby" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="date" Type="date" />
+          <Property Name="time" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="provider_uid" Type="int" Nullable="false" />
+          <Property Name="provider_name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="provider_phone" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="provider_phone2" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="provider_yellowcard" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="provider_un_reg" Type="int" Nullable="false" />
+          <Property Name="provider_family" Type="int" Nullable="false" />
+          <Property Name="provider_livealone" Type="int" Nullable="false" />
+          <Property Name="provider_traveled" Type="int" Nullable="false" />
+          <Property Name="provider_visited" Type="int" Nullable="false" />
+          <Property Name="orphan" Type="int" Nullable="false" />
+          <Property Name="note" Type="varchar(max)" Nullable="false" />
+          <Property Name="addby" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="adddate" Type="date" />
+          <Property Name="addtime" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="editedby" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="editeddate" Type="date" />
+          <Property Name="editedtime" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_associations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="associations" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="associations_aid" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="notes" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_distrbution">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" Nullable="false" />
+          <Property Name="rv" Type="int" Nullable="false" />
+          <Property Name="finance" Type="int" Nullable="false" />
+          <Property Name="medical" Type="varchar(max)" Nullable="false" />
+          <Property Name="furniture" Type="varchar(max)" Nullable="false" />
+          <Property Name="other" Type="varchar(max)" Nullable="false" />
+          <Property Name="date" Type="date" />
+          <Property Name="note" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_family_needs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="family_needs_st1" Type="int" Nullable="false" />
+          <Property Name="family_needs_st2" Type="int" Nullable="false" />
+          <Property Name="family_needs_st3" Type="int" Nullable="false" />
+          <Property Name="family_needs_st4" Type="int" Nullable="false" />
+          <Property Name="family_needs_st5" Type="int" Nullable="false" />
+          <Property Name="family_needs_st6" Type="int" Nullable="false" />
+          <Property Name="notes" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_health">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="health_diabetes_st1" Type="int" Nullable="false" />
+          <Property Name="health_diabetes_st2" Type="int" Nullable="false" />
+          <Property Name="health_bloodpresure" Type="int" Nullable="false" />
+          <Property Name="health_cv" Type="int" Nullable="false" />
+          <Property Name="health_epilipce" Type="int" Nullable="false" />
+          <Property Name="health_asthma" Type="int" Nullable="false" />
+          <Property Name="health_gland" Type="int" Nullable="false" />
+          <Property Name="health_tuamer_st1" Type="int" Nullable="false" />
+          <Property Name="health_tuamer_st2" Type="int" Nullable="false" />
+          <Property Name="health_anima" Type="int" Nullable="false" />
+          <Property Name="health_disability_st1" Type="int" Nullable="false" />
+          <Property Name="health_disability_st2" Type="int" Nullable="false" />
+          <Property Name="health_disability_st3" Type="int" Nullable="false" />
+          <Property Name="health_surgry" Type="int" Nullable="false" />
+          <Property Name="health_disease_st1" Type="int" Nullable="false" />
+          <Property Name="health_disease_st2" Type="int" Nullable="false" />
+          <Property Name="health_disease_st3" Type="int" Nullable="false" />
+          <Property Name="health_disease_st4" Type="int" Nullable="false" />
+          <Property Name="health_disease_st5" Type="int" Nullable="false" />
+          <Property Name="health_disease_st6" Type="int" Nullable="false" />
+          <Property Name="health_med_care" Type="int" Nullable="false" />
+          <Property Name="health_xray" Type="int" Nullable="false" />
+          <Property Name="health_med_tests" Type="int" Nullable="false" />
+          <Property Name="health_medicine" Type="varchar(max)" Nullable="false" />
+          <Property Name="note" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_house_assest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="house_assest_bed" Type="int" Nullable="false" />
+          <Property Name="house_assest_tv" Type="int" Nullable="false" />
+          <Property Name="house_assest_fan" Type="int" Nullable="false" />
+          <Property Name="house_assest_blanket" Type="int" Nullable="false" />
+          <Property Name="house_assest_waterheater" Type="int" Nullable="false" />
+          <Property Name="house_assest_washer" Type="int" Nullable="false" />
+          <Property Name="house_assest_ref" Type="int" Nullable="false" />
+          <Property Name="house_assest_oven" Type="int" Nullable="false" />
+          <Property Name="house_assest_carpet" Type="int" Nullable="false" />
+          <Property Name="house_assest_gas" Type="int" Nullable="false" />
+          <Property Name="house_assest_mrtba" Type="int" Nullable="false" />
+          <Property Name="house_assest_other" Type="varchar(max)" Nullable="false" />
+          <Property Name="notes" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_income_eg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="income_eg_des" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="income_eg_rentprice" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="income_eg_pay" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_passport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="passport_id" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="passport_gender" Type="int" Nullable="false" />
+          <Property Name="passport_nationality" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passport_birthplace" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="passport_birthdate" Type="date" />
+          <Property Name="passport_issueplace" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="passport_issuedate" Type="date" />
+          <Property Name="passport_expiredate" Type="date" />
+          <Property Name="passport_outofsy_date" Type="date" />
+          <Property Name="passport_intoeg_date" Type="date" />
+          <Property Name="passport_in_port" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="passport_out_port" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_researcher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="researcher_cat" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="researcher_phone" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="researcher_name" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="field_researcher_phone" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="field_researcher_name" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="researcher_date" Type="date" />
+          <Property Name="researcher_place" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_residence">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="residence_city" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="residence_neighborhood" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="residence_fulladdress" Type="varchar(max)" Nullable="false" />
+          <Property Name="residence_nationality" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="residence_insy" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider_study_work">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="study_work_st" Type="int" Nullable="false" />
+          <Property Name="study_work_level" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="study_work_skills" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="study_work_ability" Type="int" Nullable="false" />
+          <Property Name="study_work_workeg" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="user" Type="varchar" MaxLength="100" />
+          <Property Name="pass" Type="varchar" MaxLength="100" />
+          <Property Name="role" Type="int" Nullable="false" />
+          <Property Name="active" Type="int" Nullable="false" />
+          <Property Name="hint" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="usersmg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fid" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="user" Type="varchar" MaxLength="100" />
+          <Property Name="pass" Type="varchar" MaxLength="100" />
+          <Property Name="role" Type="int" Nullable="false" />
+          <Property Name="active" Type="int" Nullable="false" />
+          <Property Name="hint" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <Association Name="fm_health_ibfk_2">
+          <End Role="fm" Type="Self.fm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm_health" Type="Self.fm_health" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm_health">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fm_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm" Type="Self.fm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fm_passport_ibfk_3">
+          <End Role="fm" Type="Self.fm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm_passport" Type="Self.fm_passport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm_passport">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fm_study_work_ibfk_2">
+          <End Role="fm" Type="Self.fm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm_study_work" Type="Self.fm_study_work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm_study_work">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_associations_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_associations" Type="Self.provider_associations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_associations">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_distrbution_ibfk_1">
+          <End Role="provider" Type="Self.provider" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_distrbution" Type="Self.provider_distrbution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_distrbution">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_family_needs_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_family_needs" Type="Self.provider_family_needs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_family_needs">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_health_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_health" Type="Self.provider_health" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_health">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_house_assest_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_house_assest" Type="Self.provider_house_assest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_house_assest">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_income_eg_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_income_eg" Type="Self.provider_income_eg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_income_eg">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_passport_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_passport" Type="Self.provider_passport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_passport">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_researcher_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_researcher" Type="Self.provider_researcher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_researcher">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_residence_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_residence" Type="Self.provider_residence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_residence">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_study_work_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_study_work" Type="Self.provider_study_work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_study_work">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usersmg_ibfk_1">
+          <End Role="users" Type="Self.users" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="usersmg" Type="Self.usersmg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usersmg">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FardModelStoreContainer">
+          <EntitySet Name="fm" EntityType="Self.fm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fm_health" EntityType="Self.fm_health" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fm_passport" EntityType="Self.fm_passport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fm_study_work" EntityType="Self.fm_study_work" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="org_visitors" EntityType="Self.org_visitors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="problems_reports" EntityType="Self.problems_reports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider" EntityType="Self.provider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_associations" EntityType="Self.provider_associations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_distrbution" EntityType="Self.provider_distrbution" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_family_needs" EntityType="Self.provider_family_needs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_health" EntityType="Self.provider_health" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_house_assest" EntityType="Self.provider_house_assest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_income_eg" EntityType="Self.provider_income_eg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_passport" EntityType="Self.provider_passport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_researcher" EntityType="Self.provider_researcher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_residence" EntityType="Self.provider_residence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="provider_study_work" EntityType="Self.provider_study_work" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usersmg" EntityType="Self.usersmg" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fm_health_ibfk_2" Association="Self.fm_health_ibfk_2">
+            <End Role="fm" EntitySet="fm" />
+            <End Role="fm_health" EntitySet="fm_health" />
+          </AssociationSet>
+          <AssociationSet Name="fm_ibfk_2" Association="Self.fm_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="fm" EntitySet="fm" />
+          </AssociationSet>
+          <AssociationSet Name="fm_passport_ibfk_3" Association="Self.fm_passport_ibfk_3">
+            <End Role="fm" EntitySet="fm" />
+            <End Role="fm_passport" EntitySet="fm_passport" />
+          </AssociationSet>
+          <AssociationSet Name="fm_study_work_ibfk_2" Association="Self.fm_study_work_ibfk_2">
+            <End Role="fm" EntitySet="fm" />
+            <End Role="fm_study_work" EntitySet="fm_study_work" />
+          </AssociationSet>
+          <AssociationSet Name="provider_associations_ibfk_2" Association="Self.provider_associations_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_associations" EntitySet="provider_associations" />
+          </AssociationSet>
+          <AssociationSet Name="provider_distrbution_ibfk_1" Association="Self.provider_distrbution_ibfk_1">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_distrbution" EntitySet="provider_distrbution" />
+          </AssociationSet>
+          <AssociationSet Name="provider_family_needs_ibfk_2" Association="Self.provider_family_needs_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_family_needs" EntitySet="provider_family_needs" />
+          </AssociationSet>
+          <AssociationSet Name="provider_health_ibfk_2" Association="Self.provider_health_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_health" EntitySet="provider_health" />
+          </AssociationSet>
+          <AssociationSet Name="provider_house_assest_ibfk_2" Association="Self.provider_house_assest_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_house_assest" EntitySet="provider_house_assest" />
+          </AssociationSet>
+          <AssociationSet Name="provider_income_eg_ibfk_2" Association="Self.provider_income_eg_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_income_eg" EntitySet="provider_income_eg" />
+          </AssociationSet>
+          <AssociationSet Name="provider_passport_ibfk_2" Association="Self.provider_passport_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_passport" EntitySet="provider_passport" />
+          </AssociationSet>
+          <AssociationSet Name="provider_researcher_ibfk_2" Association="Self.provider_researcher_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_researcher" EntitySet="provider_researcher" />
+          </AssociationSet>
+          <AssociationSet Name="provider_residence_ibfk_2" Association="Self.provider_residence_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_residence" EntitySet="provider_residence" />
+          </AssociationSet>
+          <AssociationSet Name="provider_study_work_ibfk_2" Association="Self.provider_study_work_ibfk_2">
+            <End Role="provider" EntitySet="provider" />
+            <End Role="provider_study_work" EntitySet="provider_study_work" />
+          </AssociationSet>
+          <AssociationSet Name="usersmg_ibfk_1" Association="Self.usersmg_ibfk_1">
+            <End Role="users" EntitySet="users" />
+            <End Role="usersmg" EntitySet="usersmg" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="fm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" Nullable="false" />
+          <Property Name="fm_relative" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fm_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="fm_health" Relationship="Self.fm_health_ibfk_2" FromRole="fm" ToRole="fm_health" />
+          <NavigationProperty Name="provider" Relationship="Self.fm_ibfk_2" FromRole="fm" ToRole="provider" />
+          <NavigationProperty Name="fm_passport" Relationship="Self.fm_passport_ibfk_3" FromRole="fm" ToRole="fm_passport" />
+          <NavigationProperty Name="fm_study_work" Relationship="Self.fm_study_work_ibfk_2" FromRole="fm" ToRole="fm_study_work" />
+        </EntityType>
+        <EntityType Name="fm_health">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" Nullable="false" />
+          <Property Name="health_diabetes_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_diabetes_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_bloodpresure" Type="Int32" Nullable="false" />
+          <Property Name="health_cv" Type="Int32" Nullable="false" />
+          <Property Name="health_epilipce" Type="Int32" Nullable="false" />
+          <Property Name="health_asthma" Type="Int32" Nullable="false" />
+          <Property Name="health_gland" Type="Int32" Nullable="false" />
+          <Property Name="health_tuamer_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_tuamer_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_anima" Type="Int32" Nullable="false" />
+          <Property Name="health_disability_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_disability_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_disability_st3" Type="Int32" Nullable="false" />
+          <Property Name="health_surgry" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st3" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st4" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st5" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st6" Type="Int32" Nullable="false" />
+          <Property Name="health_med_care" Type="Int32" Nullable="false" />
+          <Property Name="health_xray" Type="Int32" Nullable="false" />
+          <Property Name="health_med_tests" Type="Int32" Nullable="false" />
+          <Property Name="health_medicine" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="fm" Relationship="Self.fm_health_ibfk_2" FromRole="fm_health" ToRole="fm" />
+        </EntityType>
+        <EntityType Name="fm_passport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" Nullable="false" />
+          <Property Name="passport_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_gender" Type="Int32" Nullable="false" />
+          <Property Name="passport_nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_birthplace" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_birthdate" Type="DateTime" Precision="0" />
+          <Property Name="passport_issueplace" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_issuedate" Type="DateTime" Precision="0" />
+          <Property Name="passport_expiredate" Type="DateTime" Precision="0" />
+          <Property Name="passport_outofsy_date" Type="DateTime" Precision="0" />
+          <Property Name="passport_intoeg_date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="fm" Relationship="Self.fm_passport_ibfk_3" FromRole="fm_passport" ToRole="fm" />
+        </EntityType>
+        <EntityType Name="fm_study_work">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" Nullable="false" />
+          <Property Name="fm_study_work_st" Type="Int32" Nullable="false" />
+          <Property Name="fm_study_work_level" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fm_study_work_skills" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fm_study_work_ability" Type="Int32" Nullable="false" />
+          <Property Name="fm_study_work_workeg" Type="Int32" Nullable="false" />
+          <Property Name="fm_study_work_notegreg" Type="Int32" Nullable="false" />
+          <Property Name="fm_study_work_reg" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fm_study_work_reg_soc_school" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="fm" Relationship="Self.fm_study_work_ibfk_2" FromRole="fm_study_work" ToRole="fm" />
+        </EntityType>
+        <EntityType Name="org_visitors">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="people" Type="Int32" Nullable="false" />
+          <Property Name="rooms_count" Type="Int32" Nullable="false" />
+          <Property Name="datetime_start" Type="DateTime" Precision="0" />
+          <Property Name="datetime_end" Type="DateTime" Precision="0" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="addedby" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="addeddatetime" Type="DateTime" Precision="0" />
+          <Property Name="editedby" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="editeddatetime" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="problems_reports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="problem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="addedby" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="time" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="provider">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="provider_uid" Type="Int32" Nullable="false" />
+          <Property Name="provider_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provider_phone" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provider_phone2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provider_yellowcard" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provider_un_reg" Type="Int32" Nullable="false" />
+          <Property Name="provider_family" Type="Int32" Nullable="false" />
+          <Property Name="provider_livealone" Type="Int32" Nullable="false" />
+          <Property Name="provider_traveled" Type="Int32" Nullable="false" />
+          <Property Name="provider_visited" Type="Int32" Nullable="false" />
+          <Property Name="orphan" Type="Int32" Nullable="false" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="addby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adddate" Type="DateTime" Precision="0" />
+          <Property Name="addtime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="editedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="editeddate" Type="DateTime" Precision="0" />
+          <Property Name="editedtime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="fms" Relationship="Self.fm_ibfk_2" FromRole="provider" ToRole="fm" />
+          <NavigationProperty Name="provider_associations" Relationship="Self.provider_associations_ibfk_2" FromRole="provider" ToRole="provider_associations" />
+          <NavigationProperty Name="provider_distrbution" Relationship="Self.provider_distrbution_ibfk_1" FromRole="provider" ToRole="provider_distrbution" />
+          <NavigationProperty Name="provider_family_needs" Relationship="Self.provider_family_needs_ibfk_2" FromRole="provider" ToRole="provider_family_needs" />
+          <NavigationProperty Name="provider_health" Relationship="Self.provider_health_ibfk_2" FromRole="provider" ToRole="provider_health" />
+          <NavigationProperty Name="provider_house_assest" Relationship="Self.provider_house_assest_ibfk_2" FromRole="provider" ToRole="provider_house_assest" />
+          <NavigationProperty Name="provider_income_eg" Relationship="Self.provider_income_eg_ibfk_2" FromRole="provider" ToRole="provider_income_eg" />
+          <NavigationProperty Name="provider_passport" Relationship="Self.provider_passport_ibfk_2" FromRole="provider" ToRole="provider_passport" />
+          <NavigationProperty Name="provider_researcher" Relationship="Self.provider_researcher_ibfk_2" FromRole="provider" ToRole="provider_researcher" />
+          <NavigationProperty Name="provider_residence" Relationship="Self.provider_residence_ibfk_2" FromRole="provider" ToRole="provider_residence" />
+          <NavigationProperty Name="provider_study_work" Relationship="Self.provider_study_work_ibfk_2" FromRole="provider" ToRole="provider_study_work" />
+        </EntityType>
+        <EntityType Name="provider_associations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="associations" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="associations_aid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_associations_ibfk_2" FromRole="provider_associations" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_distrbution">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" Nullable="false" />
+          <Property Name="rv" Type="Int32" Nullable="false" />
+          <Property Name="finance" Type="Int32" Nullable="false" />
+          <Property Name="medical" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="furniture" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="other" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_distrbution_ibfk_1" FromRole="provider_distrbution" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_family_needs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="family_needs_st1" Type="Int32" Nullable="false" />
+          <Property Name="family_needs_st2" Type="Int32" Nullable="false" />
+          <Property Name="family_needs_st3" Type="Int32" Nullable="false" />
+          <Property Name="family_needs_st4" Type="Int32" Nullable="false" />
+          <Property Name="family_needs_st5" Type="Int32" Nullable="false" />
+          <Property Name="family_needs_st6" Type="Int32" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_family_needs_ibfk_2" FromRole="provider_family_needs" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_health">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="health_diabetes_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_diabetes_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_bloodpresure" Type="Int32" Nullable="false" />
+          <Property Name="health_cv" Type="Int32" Nullable="false" />
+          <Property Name="health_epilipce" Type="Int32" Nullable="false" />
+          <Property Name="health_asthma" Type="Int32" Nullable="false" />
+          <Property Name="health_gland" Type="Int32" Nullable="false" />
+          <Property Name="health_tuamer_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_tuamer_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_anima" Type="Int32" Nullable="false" />
+          <Property Name="health_disability_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_disability_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_disability_st3" Type="Int32" Nullable="false" />
+          <Property Name="health_surgry" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st1" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st2" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st3" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st4" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st5" Type="Int32" Nullable="false" />
+          <Property Name="health_disease_st6" Type="Int32" Nullable="false" />
+          <Property Name="health_med_care" Type="Int32" Nullable="false" />
+          <Property Name="health_xray" Type="Int32" Nullable="false" />
+          <Property Name="health_med_tests" Type="Int32" Nullable="false" />
+          <Property Name="health_medicine" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_health_ibfk_2" FromRole="provider_health" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_house_assest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="house_assest_bed" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_tv" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_fan" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_blanket" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_waterheater" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_washer" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_ref" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_oven" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_carpet" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_gas" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_mrtba" Type="Int32" Nullable="false" />
+          <Property Name="house_assest_other" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_house_assest_ibfk_2" FromRole="provider_house_assest" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_income_eg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="income_eg_des" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="income_eg_rentprice" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="income_eg_pay" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_income_eg_ibfk_2" FromRole="provider_income_eg" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_passport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="passport_id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_gender" Type="Int32" Nullable="false" />
+          <Property Name="passport_nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_birthplace" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_birthdate" Type="DateTime" Precision="0" />
+          <Property Name="passport_issueplace" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_issuedate" Type="DateTime" Precision="0" />
+          <Property Name="passport_expiredate" Type="DateTime" Precision="0" />
+          <Property Name="passport_outofsy_date" Type="DateTime" Precision="0" />
+          <Property Name="passport_intoeg_date" Type="DateTime" Precision="0" />
+          <Property Name="passport_in_port" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passport_out_port" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_passport_ibfk_2" FromRole="provider_passport" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_researcher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="researcher_cat" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="researcher_phone" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="researcher_name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="field_researcher_phone" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="field_researcher_name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="researcher_date" Type="DateTime" Precision="0" />
+          <Property Name="researcher_place" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_researcher_ibfk_2" FromRole="provider_researcher" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_residence">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="residence_city" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="residence_neighborhood" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="residence_fulladdress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="residence_nationality" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="residence_insy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_residence_ibfk_2" FromRole="provider_residence" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="provider_study_work">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="study_work_st" Type="Int32" Nullable="false" />
+          <Property Name="study_work_level" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="study_work_skills" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="study_work_ability" Type="Int32" Nullable="false" />
+          <Property Name="study_work_workeg" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="provider" Relationship="Self.provider_study_work_ibfk_2" FromRole="provider_study_work" ToRole="provider" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="pass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="role" Type="Int32" Nullable="false" />
+          <Property Name="active" Type="Int32" Nullable="false" />
+          <Property Name="hint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="usersmgs" Relationship="Self.usersmg_ibfk_1" FromRole="users" ToRole="usersmg" />
+        </EntityType>
+        <EntityType Name="usersmg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fid" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="pass" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="role" Type="Int32" Nullable="false" />
+          <Property Name="active" Type="Int32" Nullable="false" />
+          <Property Name="hint" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="user1" Relationship="Self.usersmg_ibfk_1" FromRole="usersmg" ToRole="users" />
+        </EntityType>
+        <Association Name="fm_health_ibfk_2">
+          <End Role="fm" Type="Self.fm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm_health" Type="Self.fm_health" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm_health">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fm_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm" Type="Self.fm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fm_passport_ibfk_3">
+          <End Role="fm" Type="Self.fm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm_passport" Type="Self.fm_passport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm_passport">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fm_study_work_ibfk_2">
+          <End Role="fm" Type="Self.fm" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="fm_study_work" Type="Self.fm_study_work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fm_study_work">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_associations_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_associations" Type="Self.provider_associations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_associations">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_distrbution_ibfk_1">
+          <End Role="provider" Type="Self.provider" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_distrbution" Type="Self.provider_distrbution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_distrbution">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_family_needs_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_family_needs" Type="Self.provider_family_needs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_family_needs">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_health_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_health" Type="Self.provider_health" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_health">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_house_assest_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_house_assest" Type="Self.provider_house_assest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_house_assest">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_income_eg_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_income_eg" Type="Self.provider_income_eg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_income_eg">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_passport_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_passport" Type="Self.provider_passport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_passport">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_researcher_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_researcher" Type="Self.provider_researcher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_researcher">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_residence_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_residence" Type="Self.provider_residence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_residence">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="provider_study_work_ibfk_2">
+          <End Role="provider" Type="Self.provider" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="provider_study_work" Type="Self.provider_study_work" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provider">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="provider_study_work">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usersmg_ibfk_1">
+          <End Role="users" Type="Self.user" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="usersmg" Type="Self.usersmg" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usersmg">
+              <PropertyRef Name="fid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FardEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="fms" EntityType="Self.fm" />
+          <EntitySet Name="fm_health" EntityType="Self.fm_health" />
+          <EntitySet Name="fm_passport" EntityType="Self.fm_passport" />
+          <EntitySet Name="fm_study_work" EntityType="Self.fm_study_work" />
+          <EntitySet Name="org_visitors" EntityType="Self.org_visitors" />
+          <EntitySet Name="problems_reports" EntityType="Self.problems_reports" />
+          <EntitySet Name="providers" EntityType="Self.provider" />
+          <EntitySet Name="provider_associations" EntityType="Self.provider_associations" />
+          <EntitySet Name="provider_distrbution" EntityType="Self.provider_distrbution" />
+          <EntitySet Name="provider_family_needs" EntityType="Self.provider_family_needs" />
+          <EntitySet Name="provider_health" EntityType="Self.provider_health" />
+          <EntitySet Name="provider_house_assest" EntityType="Self.provider_house_assest" />
+          <EntitySet Name="provider_income_eg" EntityType="Self.provider_income_eg" />
+          <EntitySet Name="provider_passport" EntityType="Self.provider_passport" />
+          <EntitySet Name="provider_researcher" EntityType="Self.provider_researcher" />
+          <EntitySet Name="provider_residence" EntityType="Self.provider_residence" />
+          <EntitySet Name="provider_study_work" EntityType="Self.provider_study_work" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="usersmgs" EntityType="Self.usersmg" />
+          <AssociationSet Name="fm_health_ibfk_2" Association="Self.fm_health_ibfk_2">
+            <End Role="fm" EntitySet="fms" />
+            <End Role="fm_health" EntitySet="fm_health" />
+          </AssociationSet>
+          <AssociationSet Name="fm_ibfk_2" Association="Self.fm_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="fm" EntitySet="fms" />
+          </AssociationSet>
+          <AssociationSet Name="fm_passport_ibfk_3" Association="Self.fm_passport_ibfk_3">
+            <End Role="fm" EntitySet="fms" />
+            <End Role="fm_passport" EntitySet="fm_passport" />
+          </AssociationSet>
+          <AssociationSet Name="fm_study_work_ibfk_2" Association="Self.fm_study_work_ibfk_2">
+            <End Role="fm" EntitySet="fms" />
+            <End Role="fm_study_work" EntitySet="fm_study_work" />
+          </AssociationSet>
+          <AssociationSet Name="provider_associations_ibfk_2" Association="Self.provider_associations_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_associations" EntitySet="provider_associations" />
+          </AssociationSet>
+          <AssociationSet Name="provider_distrbution_ibfk_1" Association="Self.provider_distrbution_ibfk_1">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_distrbution" EntitySet="provider_distrbution" />
+          </AssociationSet>
+          <AssociationSet Name="provider_family_needs_ibfk_2" Association="Self.provider_family_needs_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_family_needs" EntitySet="provider_family_needs" />
+          </AssociationSet>
+          <AssociationSet Name="provider_health_ibfk_2" Association="Self.provider_health_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_health" EntitySet="provider_health" />
+          </AssociationSet>
+          <AssociationSet Name="provider_house_assest_ibfk_2" Association="Self.provider_house_assest_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_house_assest" EntitySet="provider_house_assest" />
+          </AssociationSet>
+          <AssociationSet Name="provider_income_eg_ibfk_2" Association="Self.provider_income_eg_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_income_eg" EntitySet="provider_income_eg" />
+          </AssociationSet>
+          <AssociationSet Name="provider_passport_ibfk_2" Association="Self.provider_passport_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_passport" EntitySet="provider_passport" />
+          </AssociationSet>
+          <AssociationSet Name="provider_researcher_ibfk_2" Association="Self.provider_researcher_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_researcher" EntitySet="provider_researcher" />
+          </AssociationSet>
+          <AssociationSet Name="provider_residence_ibfk_2" Association="Self.provider_residence_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_residence" EntitySet="provider_residence" />
+          </AssociationSet>
+          <AssociationSet Name="provider_study_work_ibfk_2" Association="Self.provider_study_work_ibfk_2">
+            <End Role="provider" EntitySet="providers" />
+            <End Role="provider_study_work" EntitySet="provider_study_work" />
+          </AssociationSet>
+          <AssociationSet Name="usersmg_ibfk_1" Association="Self.usersmg_ibfk_1">
+            <End Role="users" EntitySet="users" />
+            <End Role="usersmg" EntitySet="usersmgs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FardModelStoreContainer" CdmEntityContainer="FardEntities">
+          <EntitySetMapping Name="fms">
+            <EntityTypeMapping TypeName="FardModel.fm">
+              <MappingFragment StoreEntitySet="fm">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="fm_relative" ColumnName="fm_relative" />
+                <ScalarProperty Name="fm_name" ColumnName="fm_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fm_health">
+            <EntityTypeMapping TypeName="FardModel.fm_health">
+              <MappingFragment StoreEntitySet="fm_health">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="health_diabetes_st1" ColumnName="health_diabetes_st1" />
+                <ScalarProperty Name="health_diabetes_st2" ColumnName="health_diabetes_st2" />
+                <ScalarProperty Name="health_bloodpresure" ColumnName="health_bloodpresure" />
+                <ScalarProperty Name="health_cv" ColumnName="health_cv" />
+                <ScalarProperty Name="health_epilipce" ColumnName="health_epilipce" />
+                <ScalarProperty Name="health_asthma" ColumnName="health_asthma" />
+                <ScalarProperty Name="health_gland" ColumnName="health_gland" />
+                <ScalarProperty Name="health_tuamer_st1" ColumnName="health_tuamer_st1" />
+                <ScalarProperty Name="health_tuamer_st2" ColumnName="health_tuamer_st2" />
+                <ScalarProperty Name="health_anima" ColumnName="health_anima" />
+                <ScalarProperty Name="health_disability_st1" ColumnName="health_disability_st1" />
+                <ScalarProperty Name="health_disability_st2" ColumnName="health_disability_st2" />
+                <ScalarProperty Name="health_disability_st3" ColumnName="health_disability_st3" />
+                <ScalarProperty Name="health_surgry" ColumnName="health_surgry" />
+                <ScalarProperty Name="health_disease_st1" ColumnName="health_disease_st1" />
+                <ScalarProperty Name="health_disease_st2" ColumnName="health_disease_st2" />
+                <ScalarProperty Name="health_disease_st3" ColumnName="health_disease_st3" />
+                <ScalarProperty Name="health_disease_st4" ColumnName="health_disease_st4" />
+                <ScalarProperty Name="health_disease_st5" ColumnName="health_disease_st5" />
+                <ScalarProperty Name="health_disease_st6" ColumnName="health_disease_st6" />
+                <ScalarProperty Name="health_med_care" ColumnName="health_med_care" />
+                <ScalarProperty Name="health_xray" ColumnName="health_xray" />
+                <ScalarProperty Name="health_med_tests" ColumnName="health_med_tests" />
+                <ScalarProperty Name="health_medicine" ColumnName="health_medicine" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fm_passport">
+            <EntityTypeMapping TypeName="FardModel.fm_passport">
+              <MappingFragment StoreEntitySet="fm_passport">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="passport_id" ColumnName="passport_id" />
+                <ScalarProperty Name="passport_gender" ColumnName="passport_gender" />
+                <ScalarProperty Name="passport_nationality" ColumnName="passport_nationality" />
+                <ScalarProperty Name="passport_birthplace" ColumnName="passport_birthplace" />
+                <ScalarProperty Name="passport_birthdate" ColumnName="passport_birthdate" />
+                <ScalarProperty Name="passport_issueplace" ColumnName="passport_issueplace" />
+                <ScalarProperty Name="passport_issuedate" ColumnName="passport_issuedate" />
+                <ScalarProperty Name="passport_expiredate" ColumnName="passport_expiredate" />
+                <ScalarProperty Name="passport_outofsy_date" ColumnName="passport_outofsy_date" />
+                <ScalarProperty Name="passport_intoeg_date" ColumnName="passport_intoeg_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fm_study_work">
+            <EntityTypeMapping TypeName="FardModel.fm_study_work">
+              <MappingFragment StoreEntitySet="fm_study_work">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="fm_study_work_st" ColumnName="fm_study_work_st" />
+                <ScalarProperty Name="fm_study_work_level" ColumnName="fm_study_work_level" />
+                <ScalarProperty Name="fm_study_work_skills" ColumnName="fm_study_work_skills" />
+                <ScalarProperty Name="fm_study_work_ability" ColumnName="fm_study_work_ability" />
+                <ScalarProperty Name="fm_study_work_workeg" ColumnName="fm_study_work_workeg" />
+                <ScalarProperty Name="fm_study_work_notegreg" ColumnName="fm_study_work_notegreg" />
+                <ScalarProperty Name="fm_study_work_reg" ColumnName="fm_study_work_reg" />
+                <ScalarProperty Name="fm_study_work_reg_soc_school" ColumnName="fm_study_work_reg_soc_school" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="org_visitors">
+            <EntityTypeMapping TypeName="FardModel.org_visitors">
+              <MappingFragment StoreEntitySet="org_visitors">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="people" ColumnName="people" />
+                <ScalarProperty Name="rooms_count" ColumnName="rooms_count" />
+                <ScalarProperty Name="datetime_start" ColumnName="datetime_start" />
+                <ScalarProperty Name="datetime_end" ColumnName="datetime_end" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="addedby" ColumnName="addedby" />
+                <ScalarProperty Name="addeddatetime" ColumnName="addeddatetime" />
+                <ScalarProperty Name="editedby" ColumnName="editedby" />
+                <ScalarProperty Name="editeddatetime" ColumnName="editeddatetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="problems_reports">
+            <EntityTypeMapping TypeName="FardModel.problems_reports">
+              <MappingFragment StoreEntitySet="problems_reports">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="problem" ColumnName="problem" />
+                <ScalarProperty Name="addedby" ColumnName="addedby" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="providers">
+            <EntityTypeMapping TypeName="FardModel.provider">
+              <MappingFragment StoreEntitySet="provider">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="provider_uid" ColumnName="provider_uid" />
+                <ScalarProperty Name="provider_name" ColumnName="provider_name" />
+                <ScalarProperty Name="provider_phone" ColumnName="provider_phone" />
+                <ScalarProperty Name="provider_phone2" ColumnName="provider_phone2" />
+                <ScalarProperty Name="provider_yellowcard" ColumnName="provider_yellowcard" />
+                <ScalarProperty Name="provider_un_reg" ColumnName="provider_un_reg" />
+                <ScalarProperty Name="provider_family" ColumnName="provider_family" />
+                <ScalarProperty Name="provider_livealone" ColumnName="provider_livealone" />
+                <ScalarProperty Name="provider_traveled" ColumnName="provider_traveled" />
+                <ScalarProperty Name="provider_visited" ColumnName="provider_visited" />
+                <ScalarProperty Name="orphan" ColumnName="orphan" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="addby" ColumnName="addby" />
+                <ScalarProperty Name="adddate" ColumnName="adddate" />
+                <ScalarProperty Name="addtime" ColumnName="addtime" />
+                <ScalarProperty Name="editedby" ColumnName="editedby" />
+                <ScalarProperty Name="editeddate" ColumnName="editeddate" />
+                <ScalarProperty Name="editedtime" ColumnName="editedtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_associations">
+            <EntityTypeMapping TypeName="FardModel.provider_associations">
+              <MappingFragment StoreEntitySet="provider_associations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="associations" ColumnName="associations" />
+                <ScalarProperty Name="associations_aid" ColumnName="associations_aid" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_distrbution">
+            <EntityTypeMapping TypeName="FardModel.provider_distrbution">
+              <MappingFragment StoreEntitySet="provider_distrbution">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="rv" ColumnName="rv" />
+                <ScalarProperty Name="finance" ColumnName="finance" />
+                <ScalarProperty Name="medical" ColumnName="medical" />
+                <ScalarProperty Name="furniture" ColumnName="furniture" />
+                <ScalarProperty Name="other" ColumnName="other" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_family_needs">
+            <EntityTypeMapping TypeName="FardModel.provider_family_needs">
+              <MappingFragment StoreEntitySet="provider_family_needs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="family_needs_st1" ColumnName="family_needs_st1" />
+                <ScalarProperty Name="family_needs_st2" ColumnName="family_needs_st2" />
+                <ScalarProperty Name="family_needs_st3" ColumnName="family_needs_st3" />
+                <ScalarProperty Name="family_needs_st4" ColumnName="family_needs_st4" />
+                <ScalarProperty Name="family_needs_st5" ColumnName="family_needs_st5" />
+                <ScalarProperty Name="family_needs_st6" ColumnName="family_needs_st6" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_health">
+            <EntityTypeMapping TypeName="FardModel.provider_health">
+              <MappingFragment StoreEntitySet="provider_health">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="health_diabetes_st1" ColumnName="health_diabetes_st1" />
+                <ScalarProperty Name="health_diabetes_st2" ColumnName="health_diabetes_st2" />
+                <ScalarProperty Name="health_bloodpresure" ColumnName="health_bloodpresure" />
+                <ScalarProperty Name="health_cv" ColumnName="health_cv" />
+                <ScalarProperty Name="health_epilipce" ColumnName="health_epilipce" />
+                <ScalarProperty Name="health_asthma" ColumnName="health_asthma" />
+                <ScalarProperty Name="health_gland" ColumnName="health_gland" />
+                <ScalarProperty Name="health_tuamer_st1" ColumnName="health_tuamer_st1" />
+                <ScalarProperty Name="health_tuamer_st2" ColumnName="health_tuamer_st2" />
+                <ScalarProperty Name="health_anima" ColumnName="health_anima" />
+                <ScalarProperty Name="health_disability_st1" ColumnName="health_disability_st1" />
+                <ScalarProperty Name="health_disability_st2" ColumnName="health_disability_st2" />
+                <ScalarProperty Name="health_disability_st3" ColumnName="health_disability_st3" />
+                <ScalarProperty Name="health_surgry" ColumnName="health_surgry" />
+                <ScalarProperty Name="health_disease_st1" ColumnName="health_disease_st1" />
+                <ScalarProperty Name="health_disease_st2" ColumnName="health_disease_st2" />
+                <ScalarProperty Name="health_disease_st3" ColumnName="health_disease_st3" />
+                <ScalarProperty Name="health_disease_st4" ColumnName="health_disease_st4" />
+                <ScalarProperty Name="health_disease_st5" ColumnName="health_disease_st5" />
+                <ScalarProperty Name="health_disease_st6" ColumnName="health_disease_st6" />
+                <ScalarProperty Name="health_med_care" ColumnName="health_med_care" />
+                <ScalarProperty Name="health_xray" ColumnName="health_xray" />
+                <ScalarProperty Name="health_med_tests" ColumnName="health_med_tests" />
+                <ScalarProperty Name="health_medicine" ColumnName="health_medicine" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_house_assest">
+            <EntityTypeMapping TypeName="FardModel.provider_house_assest">
+              <MappingFragment StoreEntitySet="provider_house_assest">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="house_assest_bed" ColumnName="house_assest_bed" />
+                <ScalarProperty Name="house_assest_tv" ColumnName="house_assest_tv" />
+                <ScalarProperty Name="house_assest_fan" ColumnName="house_assest_fan" />
+                <ScalarProperty Name="house_assest_blanket" ColumnName="house_assest_blanket" />
+                <ScalarProperty Name="house_assest_waterheater" ColumnName="house_assest_waterheater" />
+                <ScalarProperty Name="house_assest_washer" ColumnName="house_assest_washer" />
+                <ScalarProperty Name="house_assest_ref" ColumnName="house_assest_ref" />
+                <ScalarProperty Name="house_assest_oven" ColumnName="house_assest_oven" />
+                <ScalarProperty Name="house_assest_carpet" ColumnName="house_assest_carpet" />
+                <ScalarProperty Name="house_assest_gas" ColumnName="house_assest_gas" />
+                <ScalarProperty Name="house_assest_mrtba" ColumnName="house_assest_mrtba" />
+                <ScalarProperty Name="house_assest_other" ColumnName="house_assest_other" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_income_eg">
+            <EntityTypeMapping TypeName="FardModel.provider_income_eg">
+              <MappingFragment StoreEntitySet="provider_income_eg">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="income_eg_des" ColumnName="income_eg_des" />
+                <ScalarProperty Name="income_eg_rentprice" ColumnName="income_eg_rentprice" />
+                <ScalarProperty Name="income_eg_pay" ColumnName="income_eg_pay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_passport">
+            <EntityTypeMapping TypeName="FardModel.provider_passport">
+              <MappingFragment StoreEntitySet="provider_passport">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="passport_id" ColumnName="passport_id" />
+                <ScalarProperty Name="passport_gender" ColumnName="passport_gender" />
+                <ScalarProperty Name="passport_nationality" ColumnName="passport_nationality" />
+                <ScalarProperty Name="passport_birthplace" ColumnName="passport_birthplace" />
+                <ScalarProperty Name="passport_birthdate" ColumnName="passport_birthdate" />
+                <ScalarProperty Name="passport_issueplace" ColumnName="passport_issueplace" />
+                <ScalarProperty Name="passport_issuedate" ColumnName="passport_issuedate" />
+                <ScalarProperty Name="passport_expiredate" ColumnName="passport_expiredate" />
+                <ScalarProperty Name="passport_outofsy_date" ColumnName="passport_outofsy_date" />
+                <ScalarProperty Name="passport_intoeg_date" ColumnName="passport_intoeg_date" />
+                <ScalarProperty Name="passport_in_port" ColumnName="passport_in_port" />
+                <ScalarProperty Name="passport_out_port" ColumnName="passport_out_port" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_researcher">
+            <EntityTypeMapping TypeName="FardModel.provider_researcher">
+              <MappingFragment StoreEntitySet="provider_researcher">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="researcher_cat" ColumnName="researcher_cat" />
+                <ScalarProperty Name="researcher_phone" ColumnName="researcher_phone" />
+                <ScalarProperty Name="researcher_name" ColumnName="researcher_name" />
+                <ScalarProperty Name="field_researcher_phone" ColumnName="field_researcher_phone" />
+                <ScalarProperty Name="field_researcher_name" ColumnName="field_researcher_name" />
+                <ScalarProperty Name="researcher_date" ColumnName="researcher_date" />
+                <ScalarProperty Name="researcher_place" ColumnName="researcher_place" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_residence">
+            <EntityTypeMapping TypeName="FardModel.provider_residence">
+              <MappingFragment StoreEntitySet="provider_residence">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="residence_city" ColumnName="residence_city" />
+                <ScalarProperty Name="residence_neighborhood" ColumnName="residence_neighborhood" />
+                <ScalarProperty Name="residence_fulladdress" ColumnName="residence_fulladdress" />
+                <ScalarProperty Name="residence_nationality" ColumnName="residence_nationality" />
+                <ScalarProperty Name="residence_insy" ColumnName="residence_insy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provider_study_work">
+            <EntityTypeMapping TypeName="FardModel.provider_study_work">
+              <MappingFragment StoreEntitySet="provider_study_work">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="study_work_st" ColumnName="study_work_st" />
+                <ScalarProperty Name="study_work_level" ColumnName="study_work_level" />
+                <ScalarProperty Name="study_work_skills" ColumnName="study_work_skills" />
+                <ScalarProperty Name="study_work_ability" ColumnName="study_work_ability" />
+                <ScalarProperty Name="study_work_workeg" ColumnName="study_work_workeg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="FardModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="user1" ColumnName="user" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="hint" ColumnName="hint" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usersmgs">
+            <EntityTypeMapping TypeName="FardModel.usersmg">
+              <MappingFragment StoreEntitySet="usersmg">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="hint" ColumnName="hint" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
